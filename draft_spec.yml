@@ -1,0 +1,76 @@
+#based on rfc 1436: https://tools.ietf.org/html/rfc1436
+#yaml 1.2: https://yaml.org/spec/1.2/
+
+text: |
+    multi-line text
+
+# files
+
+directory: 
+    name: human readable title
+    path: /                              
+                                         # optional settings for most items: (defaults are in parens)
+    host: files.boxofcables.dev    		 # (same server)
+    port: 70                       		 # (70)
+    altpath: /                     		 # (omitted)
+    althost: files2.boxofcables.dev      # (omitted)
+    altport: 80                    		 # (omitted)
+    enable_ext_attr: {true, false}       # (false)
+    admin: name <email@mail.com>   		 # (server user and domain)
+    abstract: |                    		 # (omitted)
+      a directory                   
+    mod_date: Fri Jan 17 11:03:36 EST 2020  	 # (file's mod date from the OS)
+
+plaintext:
+    name: human readable title
+    path: /plaintext.txt
+
+binary:
+    name: human readable title
+    type: {generic, binhex, dos, uue, gif, img, pdf, audio, mime} # (generic)
+    path: /binary.bin
+
+listfilesinline: {true, false}
+
+# linking
+
+telnet: 
+    name: human readable title
+    type: {default, 3270} 					   # (default)
+    host:
+    port: 21
+
+html: 
+    name: human readable title
+    path: /index.html           
+
+# interaction
+
+ask:
+    name: human readable title
+    info: human readable question
+    type: {simple, multiline, password, checkboxes, radio, files} # (simple)
+    script: /script.pl
+
+# info
+
+info:
+    name: human readable title
+    path: /                     
+
+error:
+    name: human readable title
+
+# finding things
+
+search: 
+    name: human readable title
+    path: /                    
+
+mirror:
+    name: human readable title
+    path: /                    
+
+nameserver: 
+    name: human readable title
+    path: /
